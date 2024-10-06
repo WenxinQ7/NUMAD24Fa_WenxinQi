@@ -1,5 +1,6 @@
 package com.example.numad24fa_wenxinqi;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
@@ -22,6 +23,13 @@ public class MainActivity extends AppCompatActivity {
         aboutMeButton.setOnClickListener(v -> {
             // Display the toast with your name and email
             Toast.makeText(MainActivity.this, "Wenxin Qi\nqi.wenx@northeastern.edu", Toast.LENGTH_SHORT).show();
+        });
+
+        Button quicCalcButton = findViewById(R.id.buttonQuicCalc);
+        quicCalcButton.setOnClickListener(v -> {
+            // Start the calculator activity
+            Intent intent = new Intent(MainActivity.this, CalculatorActivity.class);
+            startActivity(intent);
         });
     }
 }
